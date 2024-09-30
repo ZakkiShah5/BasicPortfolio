@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWolf-NewsPortal</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+    <link rel="shortcut icon" href="../assets/images/branding/transparent.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/6a561972d4.js" crossorigin="anonymous"></script>
+    <!-- <script src="../assets/main.js"></script> -->
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://kit.fontawesome.com/6a561972d4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/images/branding/transparent.png" alt="webwolf">
+                </a>
+                <nav>
+                    <ul class="menus">
+                        <li>
+                            <a href="../Quiz project/index.html">Quiz</a>
+                        </li>
+                        <li>
+                            <a href="../ToDo List Manager/index.html">Todo List</a>
+                        </li>
+                        <li>
+                            <a href="./index.html">News</a>
+                        </li>
+                        <li>
+                            <a href="../kanbanAppNew/index.html">Progress Board</a>
+                        </li>
+                        <li>
+                            <a href="../Budget manager/index.html">Budget Manager</a>
+                        </li>
+                        <li>
+                            <a href="../bookmark manager/index.html">Bookmarks</a>
+                        </li>
+                        <span class="newsletter">Join Newsletter</span>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header>
+        <div class="container">
+            <div class="title"><span>WebWolf</span>-NewsPortal</div>
+            <p>Stay informed about what's happening around the world!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="loader" style="display: none;">
+            <div class="loading"></div>
+            <span>Loading...</span>
+        </div>
+        <section class="news">
+            <div class="container">
+                <div class="category">
+                    <span class="active"
+                        data-id="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=23ce795278bd4f0bae372890bd338028">USA
+                        (All)</span>
+                    <span
+                        data-id="https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=23ce795278bd4f0bae372890bd338028">USA
+                        (Sports)</span>
+                    <span
+                        data-id="https://newsapi.org/v2/everything?q=crypto&sortBy=publishedAt&apiKey=23ce795278bd4f0bae372890bd338028">Crypto</span>
+                    <span
+                        data-id="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=23ce795278bd4f0bae372890bd338028">Tech
+                        Currents</span>
+                </div>
+                <div class="total">
+
+                </div>
+                <div class="cards">
+                    <!-- <div class="card">
+                        <div class="image"><img src="./assets/luke-chesser-rCOWMC8qf8A-unsplash.jpg" alt=""></div>
+                        <div class="info">
+                            <div>
+                                <p class="news-title">Lorem ipsum.</p>
+                                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nihil,
+                                    voluptate officiis ea fugiat enim totam voluptas. Distinctio sit sapiente ipsa
+                                    eligendi
+                                    consequatur quasi blanditiis suscipit sunt laboriosam pariatur? Facilis!Lorem Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit. Modi non eos cupiditate quod
+                                    recusandae aliquam obcaecati provident aperiam! Sapiente porro consequuntur dolores
+                                    ipsa
+                                    cum quidem sit assumenda at laudantium molestias?</p>
+                                <p class="time">
+                                    <span>10:13:23</span>
+                                    <span>2024-05-12</span>
+                                </p>
+                            </div>
+                            <div class="other">
+                                <span class="source">Don't know</span>
+                                <a href="">Read More!</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <section class="modal">
+                    <div class="newsletter-modal">
+                        <p>Join Our Newsletter!</p>
+                        <form>
+                            <input type="text" placeholder="Name" name="name">
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                        <i class="fa-solid fa-xmark"></i>
+    
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="brandName">
+                    <span>© WebWolf by Zakee</span>
+                </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/zakee-ul-hassan-813b201ab/" target="_blank"><i
+                            class="fa-brands fa-linkedin social"></i> </a>
+                    <a href="https://github.com/ZakkiShah5" target="_blank"><i
+                            class="fa-brands fa-github social"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menus = document.querySelector(".menus");
+        const news = document.querySelector(".newsletter");
+        const modal = document.querySelector(".modal");
+        const xmark = document.querySelector(".modal .fa-solid");
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active')
+            menus.classList.toggle('active')
+        });
+
+
+        news.addEventListener('click', () => modal.classList.add('show'));
+
+
+        xmark.addEventListener('click', () => modal.classList.remove('show'));
+
+    </script>
+</body>
+
+</html>

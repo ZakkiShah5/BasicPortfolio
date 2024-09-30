@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #edf6f9;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px 30px;
+}
+
+header .container{
+    text-align: center;
+}
+header h1{
+    color: #003049;
+}
+
+form .container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+form .container .link{
+    flex: 0.6;
+}
+form .container .title{
+    flex: 0.2;
+}
+form .container select{
+    flex: 0.1;
+}
+form .container button{
+    flex: 0.1;
+}
+form input, form select{
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+form button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    background-color: #80ed99;
+    cursor: pointer;
+}
+
+.category .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.category span{
+    background-color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.category span.active{
+    background-color: #80ed99;
+}
+
+.cats .container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cats .cat{
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+.cat-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.cat-category span{
+    padding: 2px 5px;
+}
+.cat-category span.netflix{
+    background-color: #ff0054;
+}
+.cat-category span.google{
+    background-color: #003049;
+    color: #fff;
+}
+.cat-category span.youtube{
+    background-color: #c1121f;
+    color: #fff;
+}
+.cat-category span.others{
+    background-color: #f0b40d;
+}
+.icons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.icons i{
+    cursor: pointer;
+}
+i.goTo{
+    color: #595a59;
+}
+i.fa-google{
+    color: #0774ae;
+}
+i.fa-trash-can{
+    color: red;
+}
+
+@media screen and (max-width: 960px) {
+    form .container{
+        flex-direction: column;
+    }
+    form input, select, button{
+        width: 100%;
+    }
+    .category .container{
+        flex-wrap: wrap;
+    }
+    .cats .cat{
+        width: 100%;
+    }
+}
